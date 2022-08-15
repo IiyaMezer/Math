@@ -25,7 +25,7 @@ public struct Matrix
         _M = new double[Row,Col];
     }
 
-
+ ///ToDo
     public static Matrix operator +(Matrix M1, Matrix M2)
     {
         if (M1.Row != M2.Row || M1.Col != M2.Col)
@@ -33,7 +33,10 @@ public struct Matrix
             throw new Exception($"Нельзя вычислить сумму, так как размерность матриц не совпадает:\n" +
                                $"M1: {M1.Col}x{M1.Row}\nM2: {M2.Col}x{M2.Row}");
         }
-
+        
+        
+        ///ToDo сделать вычисление размерности новой матрицы, и ее создание с полученной размерностью ЗАДАТЬ В СИГНАТУРЕ КОНСТРУКТОРА. 
+        ///делать это в перегрузке каждого операитора.
         var result = new Matrix();
         for (int i = 0; i < M1.Row; i++)
         {
@@ -44,7 +47,30 @@ public struct Matrix
         }
         return result;
     }
-
+    
+    ///ToDo
+     public static Matrix operator -(Matrix M1, Matrix M2)
+    {
+        return result;
+    }
+    
+        ///ToDo
+     public static Matrix operator *(Matrix M1, Matrix M2)
+    {
+        return result;
+    }
+    
+            ///ToDo умножение матрицы на число
+         public static Matrix operator *(Matrix M1, double a)
+    {
+        return result;
+    }
+            ///ToDo транспонирование матрицы
+            ///ToDo вычисление диагонали
+            ///ToDo детерминант
+            ///ToDo определние ранга матрицы
+            ///ToDo сравнения матриц ???
+    
 
 }
 
