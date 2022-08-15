@@ -2,8 +2,8 @@
 
 public class Complex
 {
-    private double _Re;
-    private double _Im;
+    private double _Re; //Действительная часть
+    private double _Im; //Мнимая часть
 
     public double Re
     {
@@ -26,10 +26,12 @@ public class Complex
     {
         return new Complex(C1.Re + C2.Re, C1.Im + C2.Im);
     }
+    
     public static Complex operator -(Complex C1, Complex C2)
     {
         return new Complex(C1.Re - C2.Re, C1.Im - C2.Im);
     }
+    
     public static Complex operator *(Complex C1, Complex C2)
     {
         return new Complex((C1.Re * C2.Re) - (C1.Im * C2.Im), (C1.Im * C2.Re) + (C1.Re * C2.Im));
@@ -49,6 +51,7 @@ public class Complex
     {
         return C1.Re == C2.Re && C1.Im == C2.Im;
     }
+    
     public static bool operator !=(Complex C1, Complex C2)
     {
         return C1.Re != C2.Re && C1.Im != C2.Im;
@@ -61,13 +64,3 @@ public class Complex
         return $"{Re}+{Im}i";
     }
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    C
