@@ -2,8 +2,8 @@
 
 public struct Matrix
 {
-    private int _Row;
-    private int _Col;
+    private int _Row; //Строки
+    private int _Col; //Столбцы
     private readonly double[,] _M;
     
     public int Row
